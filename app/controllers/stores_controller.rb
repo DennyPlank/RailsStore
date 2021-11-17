@@ -1,22 +1,20 @@
 class StoresController < ActionController::Base
-
+  before_action :set_store, only: [:show, :edit, :update, :destroy]
 def home
 render component: "Home"
 end
 
 def index
-  # here we grab all cars
- 
+  render component: 'Stores', props: {stores: Store.all}
 end
 
 def show
-  #find car and show it (1 car by id)
-
+  render component: 'Store', props: {stores: @store}
 end
 
 #(C)reate
 def new
-  # render new form
+ render component: 'newStore'
 end
 
 def create
@@ -38,6 +36,12 @@ end
 def destroy
   # find car to Delete
   # Delete
+end
+
+private
+
+def set_store
+@store = Store.find(params[:id])
 end
 
 end
