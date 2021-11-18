@@ -15,8 +15,8 @@ const Stores = (props) => {
       <p>View All Stores Here</p>
       <a href='/'>Home</a>
       {renderStores()}
-      <a href ='/store'> View One </a>
-      <a href ='/newStore'> New Store </a>
+      <a href ='/stores/:id'> View One </a>
+      <a href ='/stores/new'> New Store </a>
       <a> Delete </a>
     </div>
   )

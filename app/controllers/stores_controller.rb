@@ -9,7 +9,7 @@ def index
 end
 
 def show
-  render component: 'Store', props: {stores: @store}
+  render component: 'Store', props: {store: @store}
 end
 
 #(C)reate

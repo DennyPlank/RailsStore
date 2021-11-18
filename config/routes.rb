@@ -4,16 +4,13 @@ Rails.application.routes.draw do
   
   get '/stores', to: 'stores#index'
 
-  get '/newStore', to: 'stores#new'
+  get '/stores/new', to: 'stores#new'
   
-  get '/store', to: 'stores#show'
+  get '/stores', to: 'stores#show'
   post '/stores/:id', to: 'stores#create'
   
-  get '/store/:id', to: 'stores#edit'
+  get '/stores/:id', to: 'stores#edit'
   put '/stores/:id', to: 'stores#update'
-
-
-  
   delete '/stores/:id', to: 'stores#destroy'
 
 end
