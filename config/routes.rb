@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   
   get '/stores', to: 'stores#index'
 
-  get '/stores/new', to: 'stores#new'
+  get '/newStore', to: 'stores#new'
   
   get '/store', to: 'stores#show'
   post '/stores/:id', to: 'stores#create'

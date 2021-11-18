@@ -4,11 +4,7 @@ const Home = (props) => {
   return (
     <div>
       <p> Welcome to StoreDepot! </p>
-      <a href ='/'> Home </a>
-      <a href ='/stores'> View All </a>
-      <a href ='/store'> View One </a>
-      <a href ='/stores/new'> Edit </a>
-      <a> Delete </a>
+      <a href ='/stores'> View Our Stores! </a>
     </div>
   )
 }

@@ -3,14 +3,13 @@ import React from 'react'
 const newStore = () => {
   return (
     <div>
-      <p>New store form here</p>
+      <p> Thanks for choosing StoreDepot for you business!</p>
       <a href='/'>Home</a>
-      <a href='/stores'>Back to subs</a>
-      <a href='/stores/:id/edit'>Edit</a>
       <form action="/stores" method="post"> 
-        <p>name</p>
-        <input name="store[name]" />
+        <p>Whats the name of your new store?</p>
+        <input name="store[name]"/>
         <button type="submit">Add Store</button>
+        <a href='/stores'> Cancel </a>
       </form>
     </div>
   )
