@@ -25,12 +25,13 @@ end
 
 #(U)pdate
 def edit
-  #we need to find store in DB to update
-  # render update form
+  render component: 'editStore', props: {store: @store}
 end
 
 def update
- store = Store.find(set_store)
+ @store.update(params.require(:store).permit(:name))
+ 
+ redirect_to stores_path
 end
 
 #(D)elete
