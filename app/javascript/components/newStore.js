@@ -6,7 +6,7 @@ const newStore = () => {
       <p> Thanks for choosing StoreDepot for you business!</p>
         <p>Whats the name of your new store??</p>
       
-      <form action='/stores/' data-method="post"> 
+      <form action='/stores/' method="post"> 
         <input name="store[name]"/>
         <button type="submit">Add Store</button>
       </form>

@@ -20,7 +20,12 @@ def new
 end
 
 def create
-  
+  store = Store.new(params.require(:store).permit(:name))
+  if store.save
+  redirect_to stores_path
+  else 
+    puts "Error in create_controller"
+  end
 end
 
 #(U)pdate

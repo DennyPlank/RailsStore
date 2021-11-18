@@ -13,9 +13,9 @@ const editStore = (props) => {
       <button type="submit">Edit Store</button>
     </form>
     
-    <a href='/stores'> Cancel </a>
-    <a href='/'>Home</a>
-  </div>
+     <a href='/stores'> Cancel </a>
+     <a href='/'>Home</a>
+   </div>
   )
 }
 
