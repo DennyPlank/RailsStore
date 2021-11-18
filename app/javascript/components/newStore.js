@@ -5,7 +5,7 @@ const newStore = () => {
     <div>
       <p> Thanks for choosing StoreDepot for you business!</p>
       <a href='/'>Home</a>
-      <form action="/stores" method="post"> 
+      <form action="/stores/:id" method="post"> 
         <p>Whats the name of your new store?</p>
         <input name="store[name]"/>
         <button type="submit">Add Store</button>
