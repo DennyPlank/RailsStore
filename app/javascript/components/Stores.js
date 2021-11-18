@@ -6,6 +6,9 @@ const Stores = (props) => {
       <div>
         <p> Store Name: {store.name} </p>
         <p>Store ID: {store.id} </p>
+        <a href ={`/stores/${store.id}`}> View </a>
+        <a href ={`/stores/${store.id}/edit`}> Edit </a>
+        <a> Delete </a>
       </div>
     );
   })
@@ -13,12 +16,9 @@ const Stores = (props) => {
   return (
     <div>
       <p>View All Stores Here</p>
+      <a href ='/stores/new'> New Store </a>
       <a href='/'>Home</a>
       {renderStores()}
-      <a href ='/stores/:id/'> View One </a>
-      <a href ='/stores/new'> New Store </a>
-      <a href ='/stores/:id/edit'> Edit a Store </a>
-      <a> Delete </a>
     </div>
   )
 }

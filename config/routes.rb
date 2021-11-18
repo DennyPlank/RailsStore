@@ -1,17 +1,21 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # get 'products/index'
+
   get '/', to: 'stores#home'
   
-  get '/stores', to: 'stores#index'
+  # get '/stores', to: 'stores#index'
+  # get '/stores/new', to: 'stores#new'
 
-  get '/stores/:id', to: 'stores#show'
+  # get '/stores/:id', to: 'stores#show'
  
-  get '/stores/new', to: 'stores#new'
-  post '/stores', to: 'stores#create'
+  # post '/stores', to: 'stores#create'
    
-  get '/stores/:id/edit', to: 'stores#edit'
-  put '/stores/:id', to: 'stores#update'
+  # get '/stores/:id/edit', to: 'stores#edit'
+  # put '/stores/:id', to: 'stores#update'
   
-  delete '/stores/:id', to: 'stores#destroy'
+  # delete '/stores/:id', to: 'stores#destroy'
 
+  resources :stores do
+    resources :products
+  end
 end
