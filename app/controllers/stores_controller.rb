@@ -1,6 +1,8 @@
-class StoresController < ActionController::Base
+class StoresController < ApplicationController
+  
   before_action :set_store, only: [:show, :edit, :update, :destroy]
-def home
+
+  def home
 render component: "Home"
 end
 
@@ -18,24 +20,23 @@ def new
 end
 
 def create
-  # create car(from from UI) to our db
+  
 end
 
 #(U)pdate
 def edit
-  #we need to find car in DB to update
+  #we need to find store in DB to update
   # render update form
 end
 
 def update
-   # find car to Update
-  # update car(from from UI) to our db
+ store = Store.find(set_store)
 end
 
 #(D)elete
 def destroy
-  # find car to Delete
-  # Delete
+  @store.destroy
+  redirect_to stores_path
 end
 
 private

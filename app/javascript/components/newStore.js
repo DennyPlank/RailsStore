@@ -4,13 +4,15 @@ const newStore = () => {
   return (
     <div>
       <p> Thanks for choosing StoreDepot for you business!</p>
-      <a href='/'>Home</a>
-      <form action="/stores/:id" method="post"> 
-        <p>Whats the name of your new store?</p>
+        <p>Whats the name of your new store??</p>
+      
+      <form action='/stores/' data-method="post"> 
         <input name="store[name]"/>
         <button type="submit">Add Store</button>
-        <a href='/stores'> Cancel </a>
       </form>
+      
+      <a href='/stores'> Cancel </a>
+      <a href='/'>Home</a>
     </div>
   )
 }
