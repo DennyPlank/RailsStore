@@ -4,17 +4,28 @@ class ProductsController < ApplicationController
 
   
   def index
-    render component: "Products", props: { product: @product products: @store.products}
+    render component: "Products", props: { product: @product, products: @store.products}
   end
   
-  
-  
-  
-  
-  
-  
-  
-  
+  def show
+  end
+
+  def new
+  end
+
+  def edit
+  end
+
+  def create
+  end
+
+  def update
+  end
+
+  def destroy
+  end
+
+
   private
   def set_store
     @store = Store.find(params[:store_id])

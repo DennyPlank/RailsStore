@@ -13,12 +13,13 @@
  *= require_tree .
   require_self */
 
+  /* Home page */
   #home {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  
+  /* Stores Page */
   #store_title, #store_nav {
     display: flex;
     flex-direction: row;
@@ -38,7 +39,37 @@
     border: 1px solid black;
     padding: 1% 1% 1% 1%;
   }
+  
+  /* New Store */
+  #new_store {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
+  #new_store_nav {
+    justify-content: space-between;
+    margin-top: 5vh;
+  }
 
+/* Edit store */
+#edit_store {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#edit_store_nav {
+  justify-content: space-between;
+  margin-top: 5vh;
+}
 
+/* View store */
+#view_store {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
+#view_store_nav {
+  justify-content: space-between;
+}

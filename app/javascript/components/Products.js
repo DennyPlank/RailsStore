@@ -1,10 +1,19 @@
 import React from 'react';
 
 const Products = (props) => {
+  const renderProducts = () => {
+    console.log('hit products')
+    return props.products.map((p) => {
+      return (
+        <div> 
+          <p> product name: {p.name} </p>
+        </div>
+      )
+    })
+  }
   return (
     <div>
-      <p>Prodcuts Here</p>
-      <p></p>
+      {renderProducts()}
     </div>
   )
 }

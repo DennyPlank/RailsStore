@@ -3,7 +3,7 @@ import React from 'react'
 const editStore = (props) => {
   let store = props.store
   return (
-    <div>
+    <div id="edit_store">
        <h2> What would you like the new name to be?</h2>
        <p> Current Name: {props.store.name} </p>
     
@@ -12,9 +12,10 @@ const editStore = (props) => {
       <input name="store[name]"/>
       <button type="submit">Edit Store</button>
     </form>
-    
+    <div id="edit_store_nav">
      <a href='/stores'> Cancel </a>
      <a href='/'>Home</a>
+      </div>
    </div>
   )
 }

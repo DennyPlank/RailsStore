@@ -1,7 +1,10 @@
 class StoresController < ApplicationController
   
   before_action :set_store, only: [:show, :edit, :update, :destroy]
-
+  def react_demo
+    render component: 'Counter'
+  end
+  
   def home
 render component: "Home"
 end
