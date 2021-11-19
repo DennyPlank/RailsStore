@@ -11,4 +11,34 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
- *= require_self
+  require_self */
+
+  #home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #store_title, #store_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #store_nav {
+    justify-content: space-evenly;
+    margin-right: 40vh;
+    margin-left: 40vh;
+    margin-bottom: 3%;
+  }
+
+  #stores {
+    margin-left: 15vh;
+    margin-right: 10vh;
+    border: 1px solid black;
+    padding: 1% 1% 1% 1%;
+  }
+
+
+
+
