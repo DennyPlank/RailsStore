@@ -15,8 +15,6 @@ Rails.application.routes.draw do
   
   # delete '/stores/:id', to: 'stores#destroy'
   
-  get '/react/demo', to: 'stores#react_demo'
-  
   resources :stores do
     resources :products
   end

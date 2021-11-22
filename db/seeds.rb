@@ -20,3 +20,7 @@ rei.products.create(name: 'Ski Jacket', body: "XL, very warm")
 
 big5.products.create(name: 'Shakeweight', body: "questionable workout device")
 big5.products.create(name: 'Basketball Hoop', body: "Extends to 12ft")
+
+sB.products.create(name: 'test product 1 ', body: "this is a test")
+
+sA.products.create(name: 'test product 2', body: "this is a test")

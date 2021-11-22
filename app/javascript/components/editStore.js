@@ -20,4 +20,4 @@ const editStore = (props) => {
   )
 }
 
-export default editStore
+export default editStore;

@@ -6,8 +6,7 @@ const Store = (props) => {
       <a href='/'>Home </a>
       <a href='/stores'>Back</a>
       </div>
-      <h4> Store Name: {props.store.name} </h4>
-      {/* <p href={`stores/${props.store.id}/products/${props.products.all}`}> *Replace with products* </p> */}
+      <h1> Store Name: {props.store.name} </h1>
     </div>
   )
 }
