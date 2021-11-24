@@ -12,10 +12,9 @@ class ProductsController < ApplicationController
   end
 
   def new
-    puts 'new function hit'
-    render component: "productNew", props: { store: @store}
+    render component: "productNew", props: { product: @product, products: @store.products, store: @store }
   end
-  
+
   def create
     puts 'create hit'
     product = @store.products.new(params.require(:product).permit(:name))
@@ -27,10 +26,13 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    render component: 'ProductEdit', props: { product: @product, products: @store.products, store: @store }
   end
 
 
   def update
+    @product.update(params.require(:store).permit(:name))
+    redirect_to store_products_path
   end
 
   def destroy

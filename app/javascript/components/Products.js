@@ -6,7 +6,7 @@ const Products = (props) => {
         <div> 
           <p> Product Name: {p.name} </p>
            <a href={`/stores/${props.store.id}/products/${p.id}`}> View </a> 
-           <a> Edit </a>
+           <a href={`/stores/${props.store.id}/products/${p.id}/edit`}> Edit </a>
            <a href={`/stores/${props.store.id}/products/${p.id}`} data-method="delete"> Delete </a>  
         </div>
       )
