@@ -12,11 +12,18 @@ class ProductsController < ApplicationController
   end
 
   def new
+    puts 'new function hit'
     render component: "productNew", props: { store: @store}
   end
   
   def create
-    render component: "productCreate", props: { product: @product, products: @store.products, store: @store}
+    puts 'create hit'
+    product = @store.products.new(params.require(:product).permit(:name))
+    if product.save
+      redirect_to store_products_path
+    else 
+      puts "errors in prodcut_create controller"
+    end
   end
 
   def edit
@@ -27,6 +34,8 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    @product.destroy
+    redirect_to store_products_path
   end
 
 

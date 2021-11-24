@@ -6,7 +6,7 @@ const productNew = (props) => {
     <div>
        <h2> What is the name of the new Product? </h2>
       
-      <form action= {`/stores/${props.store.id}/products/new`} method="post">
+      <form action= {`/stores/${props.store.id}/products`} method='post'>
       <input name="product[name]"/>
       <button type="submit"> Create Product </button>
       </form> 

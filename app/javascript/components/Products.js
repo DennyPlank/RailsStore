@@ -4,12 +4,10 @@ const Products = (props) => {
     return props.products.map((p) => {
       return (
         <div> 
-          <p> Show me the money </p>
           <p> Product Name: {p.name} </p>
            <a href={`/stores/${props.store.id}/products/${p.id}`}> View </a> 
            <a> Edit </a>
            <a href={`/stores/${props.store.id}/products/${p.id}`} data-method="delete"> Delete </a>  
-           <a href={`/stores`}> Back </a>
         </div>
       )
     });
@@ -18,6 +16,8 @@ const Products = (props) => {
     <div>
       <h4> Store Name: {props.store.name}  </h4>
       <a href={`/stores/${props.store.id}/products/new`}> Add a Product! </a>
+      <a href={`/stores`}> Back </a>
+      <a href={`/`}> Home </a>
       {renderProducts()} 
     </div>
   )
